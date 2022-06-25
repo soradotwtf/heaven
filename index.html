@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html>
-
 <head>
-	<style>
-		/* Style the video: 100% width and height to cover the entire window */
-	#myVideo {
-	
-	  position: fixed;
-	  right: 0;
-	  bottom: 0;
-	  min-width: 100%;
-	  min-height: 100%;
-}
-	</style>
-		<!-- The video -->
-			<video autoplay muted loop id="myVideo">
-  				<source src="ok.mp4" type="video/mp4">
-		</video>
+  <body>
+    <style>
+      /* Style the video: 100% width and height to cover the entire window */
+      #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+    </style>
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+      <source src="ok.mp4" type="video/mp4" />
+    </video>
+    <audio id="divAudio">
+      <source src="heaven.mp3" type="audio/mp3" />
+    </audio>
+
+    <script>
+      var vAudio = document.getElementById("divAudio");
+      var hasInit = false;
+      function playMusic() {
+        if (!hasInit) {
+          hasInit = true;
+          vAudio.play();
+        }
+      }
+    </script>
+    <div onmouseover="playMusic()">hi</div>
+  </body>
 </head>
-
-	<body>
-
-	</body>
-</html>
