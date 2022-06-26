@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <head>
-  <body>
-    <audio id="divAudio">
-      <source src="heaven.mp3" type="audio/mp3" />
-    </audio>
+  <iframe
+    width="100%"
+    height="300"
+    scrolling="no"
+    frameborder="no"
+    allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1459686118&color=%231a1a19&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+  ></iframe>
+  <div
+    style="
+      font-size: 10px;
+      color: #cccccc;
+      line-break: anywhere;
+      word-break: normal;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+        Garuda, Verdana, Tahoma, sans-serif;
+      font-weight: 100;
+    "
+  >
+    <a
+      href="https://soundcloud.com/"
+      title="skylovesu"
+      target="_blank"
+      style="color: #cccccc; text-decoration: none"
+      >skylovesu</a
+    >
+    ·
+    <a
+      href="https://soundcloud.com/despacitospider/sets/heaven-is-online"
+      title="heaven Is online"
+      target="_blank"
+      style="color: #cccccc; text-decoration: none"
+      >heaven Is online</a
+    >
+  </div>
+  <audio id="divAudio">
+    <source src="heaven.mp3" type="audio/mp3" />
+  </audio>
 
-    <script>
-      var vAudio = document.getElementById("divAudio");
-      var hasInit = false;
-      function playMusic() {
-        if (!hasInit) {
-          hasInit = true;
-          vAudio.play();
-        }
+  <script>
+    var vAudio = document.getElementById("divAudio");
+    var hasInit = false;
+    function playMusic() {
+      if (!hasInit) {
+        hasInit = true;
+        vAudio.play();
       }
-    </script>
-    <div onmouseover="playMusic()">
-      <style>
-        /* Style the video: 100% width and height to cover the entire window */
-        #myVideo {
-          position: fixed;
-          right: 0;
-          bottom: 0;
-          min-width: 100%;
-          min-height: 100%;
-        }
-      </style>
-      <!-- The video -->
-      <video autoplay muted loop id="myVideo">
-        <source src="ok.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </body>
+    }
+  </script>
+  <style>
+    /* Style the video: 100% width and height to cover the entire window */
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+  </style>
+  <!-- The video -->
+  <video autoplay muted loop id="myVideo">
+    <source src="ok.mp4" type="video/mp4" />
+  </video>
+  <body></body>
 </head>
